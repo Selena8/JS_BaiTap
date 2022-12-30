@@ -79,19 +79,20 @@ allFormatsOfDate(date)
 function Check_IncreaseStringnNumber(number){
     let str = number.toString().split('');
     let j  = 0;
-    for(let i = str.length; i >= 0; i--){
-        if(str[i] > str[i-1]){
+    for(let i =1; i <str.length-1; i++){
+        if(str[i] < str[i+1] && str[i+1] < str[i+2]){
             j++;
         }
+        return true;
     }
-    if(j >= 3) return true;
-    else return false;
+    
+    return false;
 }
-
+const number0=1212121212n
 const number1 = 123456789n
 const number2 = 123432112321n
 const number3 = 988811111n
-
+console.log(Check_IncreaseStringnNumber(number0))
 console.log(Check_IncreaseStringnNumber(number1))  // true
 console.log(Check_IncreaseStringnNumber(number2)) // true
 console.log(Check_IncreaseStringnNumber(number3)) // false
