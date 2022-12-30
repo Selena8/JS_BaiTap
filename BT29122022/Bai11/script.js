@@ -1,12 +1,16 @@
-let str;
-localStorage.getItem('text');
-if (str == null || str== "") {
-    str=prompt("Mời bạn nhập tên của mình");
-    while(str == null || str== ""){
-        text = prompt("Mời bạn nhập tên của mình");
-    } 
+let str=''
+str = localStorage.getItem('text');
+// if (!str) {
+//     str = prompt("Mời bạn nhập tên của mình");
+//     while(str == null || str== ""){
+//         text = prompt("Mời bạn nhập tên của mình");
+//     } 
+// }
+while(!str){
+    str = prompt("Nhap ten cua ban")
+    if(str){
+        localStorage.setItem('text',str);
+        document.write("Hello " + str + "!");
+    }
 }
-if(str != null) {
-    document.write("Hello " + str + "!");
-    localStorage.setItem(str,'text');
-}
+document.write("Hello " + str + "!");
