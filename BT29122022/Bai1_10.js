@@ -78,11 +78,8 @@ allFormatsOfDate(date)
 // Bai_4
 function Check_IncreaseStringnNumber(number){
     let str = number.toString().split('');
-    let j  = 0;
     for(let i =1; i <str.length-1; i++){
-        if(str[i] < str[i+1] && str[i+1] < str[i+2]){
-            j++;
-        }
+        if(str[i] < str[i+1] && str[i+1] < str[i+2])
         return true;
     }
     
