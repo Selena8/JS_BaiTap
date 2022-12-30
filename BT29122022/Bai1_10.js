@@ -5,7 +5,7 @@ console.log(arrowFunctionDefinition());
 ///////////////////
 
 
-var haizz = function () {
+let haizz = function () {
     const result = `Anonymous function : hay còn gọi là hàm ẩn danh
     --> Khi nào thì sử dụng hàm ẩn danh : khi hàm chỉ sử 
     dụng một lần để thực hiện một công việc và bạn không 
@@ -138,8 +138,7 @@ const getMonthName = function (monthNumber)
    {
     const date = new Date();
     date.setMonth(monthNumber - 1);
-
-  return date.toLocaleString('en-US', { month: 'long' });
+    return date.toLocaleString('en-US', { month: 'long' });
    }
    
    console.log(getMonthName(3)) // March
