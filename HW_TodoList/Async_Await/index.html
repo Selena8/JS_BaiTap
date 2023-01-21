@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList_Async/Await</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <section class="header">
+        <h1>ToDoList</h1>
+        <input type="text" name="input-todo" id="input-name" placeholder="What needs to be done?">
+    </section>
+    <section class="main">
+        <i class="fa-duotone fa-plus"></i>
+        <ul class="Todo_Items"></ul>
+    </section>
+    <section class="footer">
+        <span class="todo-count"></span>
+        <ul class="status_filter">
+            <li class="selected">All</li>
+            <li>Active</li>
+            <li>Completed</li>
+        </ul>
+    </section>
+    <section>
+        <div class="info">
+            <p>Double-click to edit a todo</p>
+            <p>Created by Oscar Godson</p>
+            <p>Refractored by Christoph Burgmer</p>
+            <p>Part of TodoMVC</p>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>

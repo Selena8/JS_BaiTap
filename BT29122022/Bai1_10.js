@@ -101,7 +101,7 @@ function caesarCypher(str, number) {
     return str.replace(/[a-z]/gi, letter => alpha[alpha.indexOf(letter) + number]);
 
 }
-const name = "Minh Nguyet";
+const name = "abc     z";
 const cypherText = caesarCypher(name, 3)
 console.log(cypherText)
 /*sử dụng .replace() để tráo đổi chữ cái từ tin nhắn với chữ cái từ mật mã bằng cách kéo chỉ mục của chữ cái 
@@ -134,12 +134,19 @@ console.log(isIncludeJS(str3)); //true
 // Bai_8
 const getMonthName = function (monthNumber) 
    {
+    if(monthNumber>=1 && monthNumber <=12)
+    {
     const date = new Date();
     date.setMonth(monthNumber - 1);
     return date.toLocaleString('en-US', { month: 'long' });
+    }
+    else if (monthNumber<1 && monthNumber >12){
+        console.log("Not a month!");
+    }
+    
    }
    
-   console.log(getMonthName(3)) // March
+   console.log(getMonthName(13)) // March
    console.log(getMonthName(4)) // April
 /*locales: Một chuỗi có thẻ ngôn ngữ BCP 47 hoặc một mảng các chuỗi như vậy. 
 Có nhiều ngôn ngữ chúng tôi có thể chỉ định, chẳng hạn như en-UStiếng Anh Mỹ, 
